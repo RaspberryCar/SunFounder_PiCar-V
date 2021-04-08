@@ -7,7 +7,13 @@ import numpy as np
 import picar
 import os
 
+print("You use OpenCV version ",cv2.__version__)
+print("")
+
 picar.setup()
+
+print("PiCar setup done")
+
 # Show image captured by camera, True to turn on, you will need #DISPLAY and it also slows the speed of tracking
 show_image_enable   = False
 draw_circle_enable  = False
