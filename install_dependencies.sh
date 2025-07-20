@@ -14,6 +14,7 @@ is_installed_django=False
 is_installed_python_smbus=False
 is_installed_python_opencv=False
 is_installed_libjpeg8_dev=False
+is_installed_python3_rpi_gpio=False
 
 if [ "$(whoami)" != "root" ] ; then
     echo -e "You must run this script as root."
@@ -60,6 +61,12 @@ function print_result(){
     fi
     echo -e "python-opencv  \c"
     if $is_installed_python_opencv; then
+        echo -e "Success"
+    else
+        echo -e "Failed"
+    fi
+    echo -e "python3_rpi.gpio  \c"
+    if $is_installed_python3_rpi_gpio; then
         echo -e "Success"
     else
         echo -e "Failed"
@@ -115,6 +122,21 @@ else
     if_continue
     if [ $? = 1 ] ; then
         echo -e "    Skipped python-opencv installation."
+    else
+        end
+    fi
+fi
+
+echo -e "\nInstalling python3-rpi.gpio \n"
+if sudo apt-get install python3-rpi.gpio -y; then
+    echo -e "    Successfully installed python3-rpi.gpio \n"
+    is_installed_python3_rpi_gpio=true
+else
+    echo -e "    Failed to installed python3-rpi.gpio \n"
+    echo -e "    Do you want to skip this? \c"
+    if_continue
+    if [ $? = 1 ] ; then
+        echo -e "    Skipped python3-rpi.gpio installation."
     else
         end
     fi
