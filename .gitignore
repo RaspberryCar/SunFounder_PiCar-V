@@ -6,3 +6,5 @@
 *.indd
 docs/build/*
 .idea/
+venv
+
