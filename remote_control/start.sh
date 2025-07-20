@@ -19,4 +19,7 @@ elif [ "$1" = "install" ]
 then
 	echo 'Running servo installation'
 	python3 remote_control/driver/Servo.py install
+else
+	echo "Wrong parameter '$1'"
+	echo "Possible is no parameter to start server or 'install'"
 fi
