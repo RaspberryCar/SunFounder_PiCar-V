@@ -1,12 +1,12 @@
 ## SunFounder Smart Video Car Kit for Raspberry Pi
 SunFounder Smart Video Car Kit V2.0
 
-Quick Links:
-
- * [About this kit](#about_this_kit)
- * [About SunFounder](#about_sunfounder)
- * [License](#license)
- * [Contact us](#contact_us)
+### Install:
+From https://github.com/RaspberryCar/SunFounder_PiCar-V/blob/master/docs/(EN)%20PiCar-V%20User%20Manual.pdf p44
+```
+sudo ./install_dependencies.sh
+picar servo-install
+```
 
 <a id="about_this_kit"></a>
 ### About this kit:
@@ -52,3 +52,4 @@ website:
 
 E-mail:
     service@sunfounder.com
+
