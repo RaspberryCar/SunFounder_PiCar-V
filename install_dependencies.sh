@@ -163,7 +163,7 @@ fi
 
 echo -e "Cloning repo \n"
 cd ../
-git clone --recursive https://github.com/sunfounder/SunFounder_PiCar.git
+git clone --recursive https://github.com/hannesa2/SunFounder_PiCar.git
 cd SunFounder_PiCar
 echo -e "    Installing PiCar module \n"
 sudo python setup.py install
