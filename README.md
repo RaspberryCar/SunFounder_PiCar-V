@@ -5,6 +5,7 @@ SunFounder Smart Video Car Kit V2.0
 From https://github.com/RaspberryCar/SunFounder_PiCar-V/blob/master/docs/(EN)%20PiCar-V%20User%20Manual.pdf p44
 ```
 sudo ./install_dependencies.sh
+sudo reboot
 picar servo-install
 ```
 
@@ -52,4 +53,5 @@ website:
 
 E-mail:
     service@sunfounder.com
+
 
