@@ -83,7 +83,7 @@ function print_result(){
 # install python-pip django i2c-tools python-smbus python-opencv runtime #
 ###################################
 echo -e "\nInstalling django \n"
-if sudo pip3 install django==2.0 ; then
+if sudo apt install python3-django -y ; then
     echo -e "    Successfully installed django runtime \n"
     is_installed_django=true
 else
@@ -113,7 +113,7 @@ else
 fi
 
 echo -e "\nInstalling python-opencv \n"
-if sudo apt-get install python-opencv -y; then
+if sudo apt-get install python3-opencv -y; then
     echo -e "    Successfully installed python-opencv \n"
     is_installed_python_opencv=true
 else
@@ -163,7 +163,7 @@ fi
 
 echo -e "Cloning repo \n"
 cd ../
-git clone --recursive https://github.com/hannesa2/SunFounder_PiCar.git
+git clone --recursive https://github.com/hannesa2/SunFounder_PiCar.git || echo "Nothing to do with repo https://github.com/hannesa2/SunFounder_PiCar.git"
 cd SunFounder_PiCar
 echo -e "    Installing PiCar module \n"
 sudo python setup.py install
@@ -175,12 +175,12 @@ echo -e "complete\n"
 # Copy MJPG-Streamer to an Alternate Location #
 ###################################
 #
-echo -e "Copy MJPG-Streamer to an Alternate Location. \n"
-sudo cp $repo_dir/mjpg-streamer/mjpg_streamer /usr/local/bin
-sudo cp $repo_dir/mjpg-streamer/output_http.so mjpg-streamer/input_file.so mjpg-streamer/input_uvc.so /usr/local/lib/
-sudo cp -R $repo_dir/mjpg-streamer/www /usr/local/www
-sudo chmod +x /usr/local/bin/mjpg_streamer
-echo -e "complete\n"
+#echo -e "Copy MJPG-Streamer to an Alternate Location. \n"
+#sudo cp $repo_dir/mjpg-streamer/mjpg_streamer /usr/local/bin
+#sudo cp $repo_dir/mjpg-streamer/output_http.so mjpg-streamer/input_file.so mjpg-streamer/input_uvc.so /usr/local/lib/
+#sudo cp -R $repo_dir/mjpg-streamer/www /usr/local/www
+#sudo chmod +x /usr/local/bin/mjpg_streamer
+#echo -e "complete\n"
 
 ###################################
 # Export Paths #
